@@ -1,0 +1,1137 @@
+enable: true
+interval: 0
+items:
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 火球术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+5}
+                %}
+                {$t玩家}为{$t1}环火球术骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 闪电束 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+5}
+                %}
+                {$t玩家}为{$t1}环闪电束骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 光导箭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+3}
+                %}
+                {$t玩家}为{$t1}环光导箭骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 酸液飞溅 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}酸液飞溅骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 火焰箭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}火焰箭骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 冻寒之触 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}冻寒之触骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 燃火术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}燃火术骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 魔能爆 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}魔能爆骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 神导术
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}神导术骰加值，结果为1d4={d4}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 毒气喷溅 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}毒气喷溅骰伤害，结果为{$t2}d12={($t2)d12}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 冷冻射线 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}冷冻射线骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 圣火术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}圣火术骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 电爪 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}电爪骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 荆棘之鞭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+0}
+                %}
+                {$t玩家}为T{$t1}荆棘之鞭骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 恶言相加 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}恶言相加骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 霜噬 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}霜噬骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 虫群孳生 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}虫群孳生骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 魔石术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}魔石术骰伤害，结果为{$t2}d6={($t2)d6}+你的施法属性调整值
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 原初蛮击 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}原初蛮击骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 鸣雷破 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}鸣雷破骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 亡者丧钟A (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}亡者丧钟骰伤害，结果为{$t2}d12={($t2)d12}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 亡者丧钟B (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}亡者丧钟骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 光耀祷词 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}光耀祷词骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 创造篝火 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}创造篝火骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 闪电牵引 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}闪电牵引骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 心灵之楔 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}心灵之楔骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 剑刃爆发 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为T{$t1}剑刃爆发骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 哈达之臂 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环哈达之臂骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 燃烧之手 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环燃烧之手骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 繁彩球 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环繁彩球骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 七彩喷射 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)*2+4}
+                %}
+                {$t玩家}为{$t1}环七彩喷射骰效应，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 疗伤术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环疗伤术骰治疗，结果为{$t2}d8={($t2)d8}+你的施法属性调整值
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 不谐低语 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环疗伤术骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 棘雹术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环棘雹术骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 治愈真言 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环治愈真言骰治疗，结果为{$t2}d4={($t2)d4}+你的施法属性调整值
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 炼狱叱喝 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环炼狱叱喝骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 致伤术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环致伤术骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 魔法飞弹 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环魔法飞弹骰伤害，弹体数量为{$t2}，单发结果为1d4+1={d4}+{1}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 致病射线 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环致病射线骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 睡眠术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+4}
+                %}
+                {$t玩家}为{$t1}环睡眠术骰效应，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 雷鸣波 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环雷鸣波骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 巫术箭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环巫术箭骰伤害，结果为{$t2}d12={($t2)d12}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 弹射术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环弹射术骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 混乱箭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环混乱箭骰伤害，结果为2d8+{$t2}d6={2d8+($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 地颤 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环地颤骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 冰刃 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环冰刃骰伤害，结果为1d10={d10}。溅射伤害为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 塔莎酸蚀酿 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=2*int($t1)}
+                %}
+                {$t玩家}为{$t1}环塔莎酸蚀酿骰伤害，结果为{$t2}d4={($t2)d4}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 吉姆的魔法飞弹 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环吉姆的魔法飞弹骰伤害，弹体数量为{$t2}，结果为{$t2}*2d4=
+                {%if $t2>0 {$t3=2d4}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d4}else{$t3=$t9}%}{$t3}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 匕首之云 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=2*int($t1)}
+                %}
+                {$t玩家}为{$t1}环匕首之云骰伤害，结果为{$t2}d4={($t2)d4}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 警戒箭阵 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环警戒箭阵伤害，结果为1d6={1d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 火焰刀 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环火焰刀骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 炽焰法球 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环炽焰法球骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 灼热金属 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环灼热金属骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 马友夫强酸箭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环马友夫强酸箭骰伤害，结果为{$t2}d4={($t2)d4}。如命中，目标下回合结束时额外受到{$t1}d4={($t1)d4}点额外伤害
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 月华之光 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环月华之光骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 魅影之力 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)-1}
+                %}
+                {$t玩家}为{$t1}环魅影之力骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 治疗祷言 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)-1}
+                %}
+                {$t玩家}为{$t1}环治疗祷言骰治疗，结果为{$t2}d8={($t2)d8}+你的施法属性调整值
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 灼热射线 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环灼热射线骰伤害，结果为{$t2}*2d6=
+                {%if $t2>0 {$t3=2d6}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3},{%if 1 {$t2=$t2-1}%}{%if $t2>0 {$t3=2d6}else{$t3=$t9}%}{$t3}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 粉碎音波 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环粉碎音波骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 荆棘丛生 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环荆棘丛生骰伤害，结果为{$t2}d4={($t2)d4}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 龙息术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环龙息术骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 龙卷尘暴 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)-1}
+                %}
+                {$t玩家}为{$t1}环龙卷尘暴骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 麦克斯米利安的地之攫 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环麦克斯米利安的地之攫骰治疗，结果为2d6={2d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 心灵尖刺 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环心灵尖刺骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 幽影刃 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)/2+1}
+                %}
+                {$t玩家}为{$t1}环幽影刃骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 史尼洛雪球群 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环史尼洛雪球群骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 阿迦纳萨喷火术 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环阿迦纳萨喷火术骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 塔莎心灵鞭 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环塔莎心灵鞭骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 雾凇霜缚 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+1}
+                %}
+                {$t玩家}为{$t1}环雾凇霜缚骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 守卫刻文 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)+2}
+                %}
+                {$t玩家}为{$t1}环守卫刻文骰伤害，结果为{$t2}d8={($t2)d8}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 吸血鬼之触 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环吸血鬼之触骰伤害，结果为{$t2}d6={($t2)d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 土石喷发 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环土石喷发骰伤害，结果为{$t2}d12={($t2)d12}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 马友夫微流星 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环马友夫微流星骰伤害，结果为2d6={2d6}和2d6={2d6}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 雷霆步 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环雷霆步骰伤害，结果为{$t2}d10={($t2)d10}
+              - 1
+    - enable: true
+      conditions:
+        - condType: textMatch
+          matchType: matchRegex
+          value: cs 潮涌 (\d+)
+      results:
+        - resultType: replyToSender
+          delay: 0
+          message:
+            - - |-
+                {%
+                if 1 {$t2=int($t1)}
+                %}
+                {$t玩家}为{$t1}环潮涌骰伤害，结果为4d8={4d8}
+              - 1
+name: 5espells
+author:
+    - 冷筱华
+version: "0.2"
+createTimestamp: 0
+updateTimestamp: 0
+desc: ""
