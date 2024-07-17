@@ -5,7 +5,7 @@
 // @description  Converts text to base64 and vice versa,//.t2b for text2base64, and .b2t for base642text
 // @timestamp    2024-07-17
 // @license      AGPL-3.0
-// @homepageURL  https://example.com/
+// @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
 // ==/UserScript==
 
 // 定义扩展
