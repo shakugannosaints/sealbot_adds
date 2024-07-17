@@ -10,12 +10,12 @@
 
 const OPENROUTER_API_KEY = 'your-api-key'
 
-if (!seal.ext.find('chat_ori')) {
-  const ext = seal.ext.new('chat_ori', '容易', '1.0.0')
+if (!seal.ext.find('chat')) {
+  const ext = seal.ext.new('chat', '容易', '1.0.0')
 
   const cmdCat = seal.ext.newCmdItemInfo()
-  cmdCat.name = 'chat_ori'
-  cmdCat.help = '发送一张随机的cat图片。用法：.chat_ori'
+  cmdCat.name = 'chat'
+  cmdCat.help = '发送一张随机的cat图片。用法：.chat'
   cmdCat.solve = async (ctx, msg, cmdArgs) => {
     try {
       const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -49,5 +49,5 @@ if (!seal.ext.find('chat_ori')) {
   }
 
   seal.ext.register(ext)
-  ext.cmdMap['chat_ori'] = cmdCat
+  ext.cmdMap['chat'] = cmdCat
 }
