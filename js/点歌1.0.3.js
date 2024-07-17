@@ -5,7 +5,7 @@
 // @description  点歌，返回能直接播放的音乐卡片，方便放bgm。可用".点歌 歌名 作者"或".网易云 歌名 作者"调用，前者是qq音乐，后者是网易云音乐。现在支持歌曲名中的空格。
 // @timestamp    2024-7-17
 // @license      Apache-2
-// @homepageURL  https://github.com/sealdice/javascript
+// @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
 // ==/UserScript==
 if (!seal.ext.find("music")) {
   const ext = seal.ext.new("music", "冷筱华", "1.0.3");
