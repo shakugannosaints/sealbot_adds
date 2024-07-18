@@ -10,12 +10,12 @@
 
 const OPENROUTER_API_KEY = 'your-api-key'
 
-if (!seal.ext.find('chat_ori')) {
-  const ext = seal.ext.new('chat_ori', '冷筱华', '1.0.0')
+if (!seal.ext.find('chat_bot')) {
+  const ext = seal.ext.new('chat_bot', '冷筱华', '1.0.0')
 
   const cmdCat = seal.ext.newCmdItemInfo()
-  cmdCat.name = 'chat_ori'
-  cmdCat.help = '用法：.chat_ori'
+  cmdCat.name = 'chat_bot'
+  cmdCat.help = '用法：.chat_bot'
   cmdCat.solve = async (ctx, msg, cmdArgs) => {
     try {
       const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -53,5 +53,5 @@ if (!seal.ext.find('chat_ori')) {
   }
 
   seal.ext.register(ext)
-  ext.cmdMap['chat_ori'] = cmdCat
+  ext.cmdMap['chat_bot'] = cmdCat
 }
