@@ -3,6 +3,7 @@
 // @description  GPTscript with memory feature and system message
 // @version      1.0.0
 // @author       冷筱华
+// @timestamp    2024-07-18
 // @license      AGPL-3.0
 // @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
 // ==/UserScript==
