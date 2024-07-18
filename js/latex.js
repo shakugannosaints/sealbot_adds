@@ -10,8 +10,6 @@
 
 if (!seal.ext.find("latex-image-renderer")) {
     const ext = seal.ext.new("latex-image-renderer", "冷筱华", "1.0.0");
-    // 假设我们有这个颜色参数
-    let backgroundColor = 'white'; // 默认白色背景
     // LaTeX渲染命令
     const cmdLatex = seal.ext.newCmdItemInfo();
     cmdLatex.name = "latex";
