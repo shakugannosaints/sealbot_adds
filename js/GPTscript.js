@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GPTscript
-// @author       冷筱华
+// @author       容易/冷筱华
 // @version      1.0.0
 // @description  GPTscript
 // @timestamp    2024-07-17
@@ -11,7 +11,7 @@
 const OPENROUTER_API_KEY = 'your-api-key'
 
 if (!seal.ext.find('chat_bot')) {
-  const ext = seal.ext.new('chat_bot', '冷筱华', '1.0.0')
+  const ext = seal.ext.new('chat_bot', '容易/冷筱华', '1.0.0')
 
   const cmdCat = seal.ext.newCmdItemInfo()
   cmdCat.name = 'chat_bot'
