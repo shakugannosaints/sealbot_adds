@@ -18,9 +18,7 @@ if (!seal.ext.find('dogApi')) {
   cmddog.help = `发送一张随机的dog图片。用法：
   .dog
   .dog lb
-  .dog lc
-  .dog bid bid
-  .dog cid cid`;
+  .dog bid bid`
   cmddog.solve = async (ctx, msg, cmdArgs) => {
     try {
       let data ={};
@@ -51,19 +49,6 @@ if (!seal.ext.find('dogApi')) {
         });
         data = await response.json();
 
-      }
-
-      if (cmdArgs.args.length > 0 && cmdArgs.args[0] === 'cid') {
-        let apiUrl = 'https://api.thedogapi.com/v1/images/search';
-        if (cmdArgs.args.length > 0 && cmdArgs.args[0] === 'cid') {
-            apiUrl += `?dogegory_ids=${encodeURIComponent(cmdArgs.args[1])}`;
-        }
-        const response = await fetch(apiUrl, {
-            headers: {
-                'x-api-key': thedogapi_key
-            }
-        });
-        data = await response.json();
       }
 
       if (cmdArgs.args.length == 0) {
