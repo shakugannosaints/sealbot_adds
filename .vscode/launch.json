@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "name": "Deno",
+      "type": "node",
+      "request": "launch",
+      // "console": "integratedTerminal",
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}",
+      "program": "${fileBasename}",
+      "envFile": "${workspaceFolder}/.env",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--inspect-brk",
+        "-A"
+      ],
+      "outputCapture": "std",
+      "attachSimplePort": 9229
+    },
+    {
+      "name": "Deno in console",
+      "type": "node",
+      "request": "launch",
+      // "console": "integratedTerminal",
+      "console": "internalConsole",
+      "cwd": "${fileDirname}",
+      "program": "${fileBasename}",
+      "envFile": "${workspaceFolder}/.env",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--inspect-brk",
+        "-A"
+      ],
+      // "outputCapture": "std",
+      "attachSimplePort": 9229
+    },
+  ]
+}
