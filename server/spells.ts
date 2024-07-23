@@ -85,8 +85,7 @@ export function useSpell(args: UseSpellArgs): UseSpellResponse {
     if (perhapsSpell)
       return {
         success: false,
-        message: '法术名未找到',
-        fullMessage: `法术名未找到，但找到了类似的法术：${perhapsSpell.name}`
+        message: `法术名未找到，但找到了类似的法术：${perhapsSpell.name}`
       }
     return { success: false, message: '法术名未找到' }
   }

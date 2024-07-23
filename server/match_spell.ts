@@ -20,9 +20,10 @@ function rollDice(dice: DiceRaw): number {
 
 function rollMatchedDice(dice: MatchedDice): [number, number[]][] {
   return dice.results.map((group) => {
-    const sum = group.reduce((acc, d) => acc + rollDice(d), 0)
-    return [sum, group.map((d) => rollDice(d))]
-  })
+    const rolledGroup = group.map((d) => rollDice(d)); 
+    const sum = rolledGroup.reduce((acc, curr) => acc + curr, 0); 
+    return [sum, rolledGroup]; 
+  });
 }
 
 export function parseDiceContent(c: string): DiceRaw[][] {
