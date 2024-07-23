@@ -275,7 +275,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledamage 10d6|4-9|2d6} for each slot level above 4th."
+						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledice 10d6|4-9|2d6} for each slot level above 4th."
 					]
 				}
 			],
@@ -333,7 +333,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 6d6|1-9|2d6} for each slot level above 1st."
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledice 6d6|1-9|2d6} for each slot level above 1st."
 					]
 				}
 			],
@@ -1150,7 +1150,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot above 2nd level, the damage of your first attack increases by {@scaledamage 1d6|2-9|1d6} for every slot level above 2nd."
+						"When you cast this spell using a spell slot above 2nd level, the damage of your first attack increases by {@scaledice 1d6|2-9|1d6} for every slot level above 2nd."
 					]
 				}
 			],
@@ -9640,7 +9640,7 @@
 					"name": "升环施法效应",
 					"ENG_name": "At Higher Levels",
 					"entries": [
-						"使用四环或更高法术位施展该法术时，你使用的法术位每比三环高2环，其伤害就增加{@scaledamage 1d8|3,5,7,9|1d8}。"
+						"使用四环或更高法术位施展该法术时，你使用的法术位每比三环高2环，其伤害就增加{@scaledice 1d8|3,5,7,9|1d8}。"
 					]
 				}
 			],
@@ -11302,7 +11302,7 @@
 					"name": "升环施法效应",
 					"ENG_name": "At Higher Levels",
 					"entries": [
-						"当你使用七环或更高环位的法术位施展该法术时，每比六环高出一环的法术位能使该法术的伤害增加{@scaledamage 8d8|6-9|1d8} 。"
+						"当你使用七环或更高环位的法术位施展该法术时，每比六环高出一环的法术位能使该法术的伤害增加{@scaledice 8d8|6-9|1d8} 。"
 					]
 				}
 			],
@@ -11369,7 +11369,7 @@
 					"name": "升环施法效应",
 					"ENG_name": "At Higher Levels",
 					"entries": [
-						"当你使用五环或者更高环位的法术位施展该法术时， 每比四环高出一环的法术位可以使该法术的伤害增加{@scaledamage 5d10|4-9|1d10} 。"
+						"当你使用五环或者更高环位的法术位施展该法术时， 每比四环高出一环的法术位可以使该法术的伤害增加{@scaledice 5d10|4-9|1d10} 。"
 					]
 				}
 			],
@@ -11515,7 +11515,7 @@
 					"name": "升环施法效应",
 					"ENG_name": "At Higher Levels",
 					"entries": [
-						"每当你使用二环或更高的法术位施展该法术时，每比一环多一的法术位能使该法术的伤害增加{@scaledamage 2d8|1-9|1d8}。"
+						"每当你使用二环或更高的法术位施展该法术时，每比一环多一的法术位能使该法术的伤害增加{@scaledice 2d8|1-9|1d8}。"
 					]
 				}
 			],
@@ -11585,7 +11585,7 @@
 					"name": "升环施法效应",
 					"ENG_name": "At Higher Levels",
 					"entries": [
-						"当你使用四环或更高环的法术位施展该法术时，每比三环高出一环的法术位就能使法术的伤害增加{@scaledamage 6d6|3-9|1d6}，并使推拉的距离增加5尺。"
+						"当你使用四环或更高环的法术位施展该法术时，每比三环高出一环的法术位就能使法术的伤害增加{@scaledice 6d6|3-9|1d6}，并使推拉的距离增加5尺。"
 					]
 				}
 			],
@@ -12774,7 +12774,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 2d10|2-9|1d10} for each slot level above 2nd."
+						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 2d10|2-9|1d10} for each slot level above 2nd."
 					]
 				}
 			],
@@ -12829,7 +12829,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, increase your speed by 5 feet for each spell slot level above 3rd. The spell deals an additional {@scaledamage 1d6|3-9|1d6} fire damage for each slot level above 3rd."
+						"When you cast this spell using a spell slot of 4th level or higher, increase your speed by 5 feet for each spell slot level above 3rd. The spell deals an additional {@scaledice 1d6|3-9|1d6} fire damage for each slot level above 3rd."
 					]
 				}
 			],
@@ -13101,7 +13101,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledamage 7d6|4-9|1d6} for each slot level above 4th."
+						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledice 7d6|4-9|1d6} for each slot level above 4th."
 					]
 				}
 			],
@@ -13157,7 +13157,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by {@scaledamage 3d8|2-9|1d8} for each slot level above 2nd."
+						"When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by {@scaledice 3d8|2-9|1d8} for each slot level above 2nd."
 					]
 				}
 			],
@@ -13532,7 +13532,7 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 2d6|2-9|1d6} for each slot above the 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd."
+						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledice 2d6|2-9|1d6} for each slot above the 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd."
 					]
 				}
 			],

@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         DnDSpellScript-SRD
 // @author       MMMartt、冷筱华
-// @version      1.0.3
+// @version      1.0.4
 // @description  DnDSRD法术脚本
-// @timestamp    2024-07-22
+// @timestamp    2024-07-24
 // @license      AGPL-3.0
 // @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
 // ==/UserScript==
@@ -11,7 +11,7 @@
 const API_URL = 'http://localhost:8080'
 
 if (!seal.ext.find('dnd_spell')) {
-  const ext = seal.ext.new('dnd_spell', '冷筱华', '1.0.3')
+  const ext = seal.ext.new('dnd_spell', 'MMMartt、冷筱华', '1.0.4')
 
   const cmdCastSpell = seal.ext.newCmdItemInfo()
   cmdCastSpell.name = 'cs'
