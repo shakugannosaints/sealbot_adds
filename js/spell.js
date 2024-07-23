@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         DnDSpellScript-SRD
+// @name         DnDSpellScript
 // @author       MMMartt、冷筱华
 // @version      1.0.4
 // @description  DnDSRD法术脚本
