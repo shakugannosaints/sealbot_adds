@@ -1,17 +1,17 @@
 // ==UserScript==
-// @name         DnDSpellScript
-// @author       小嘟嘟噜
-// @version      1.0.2
-// @description  DnD法术脚本
+// @name         DnDSpellScript-SRD
+// @author       小嘟嘟噜、冷筱华
+// @version      1.0.3
+// @description  DnDSRD法术脚本
 // @timestamp    2024-07-22
 // @license      AGPL-3.0
 // @homepageURL  https://github.com/yourusername/your-repo
 // ==/UserScript==
-
+// 使用说明：请将本脚本放入海豹的js拓展文件夹，重载脚本，然后使用deno运行server并不要关闭其弹出的对话框
 const API_URL = 'http://localhost:8080';
 
 if (!seal.ext.find('dnd_spell')) {
-  const ext = seal.ext.new('dnd_spell', '小嘟嘟噜', '1.0.2');
+  const ext = seal.ext.new('dnd_spell', '小嘟嘟噜', '1.0.3');
 
   const cmdCastSpell = seal.ext.newCmdItemInfo();
   cmdCastSpell.name = 'cs';
@@ -38,24 +38,35 @@ if (!seal.ext.find('dnd_spell')) {
       }
 
       // 获取对应环数的伤害骰子
-      const damageDice = spellData.damage.damage_at_slot_level[level.toString()];
-      if (!damageDice) {
+      let damageDiceStr = spellData.damage.damage_at_slot_level[level.toString()];
+      if (!damageDiceStr) {
         return seal.replyToSender(ctx, msg, `没有${level}环的伤害信息`);
-      }
+}
 
-      // 解析伤害骰子（例如："8d6"）
-      const [diceCount, diceSides] = damageDice.split('d').map(Number);
+      // 解析伤害骰子（例如："8d6" 或 "20d6 + 20d6"）
+      const damageParts = damageDiceStr.split(' + ');
+      const damageTotals = [];
+      const allDamageResults = [];
 
-      // 随机生成伤害
-      const damage = Array(diceCount).fill(0).map(() => Math.floor(Math.random() * diceSides) + 1);
-      const totalDamage = damage.reduce((a, b) => a + b, 0);
+      for (const part of damageParts) {
+       const [diceCount, diceSides] = part.split('d').map(Number);
+       const damage = Array(diceCount).fill(0).map(() => Math.floor(Math.random() * diceSides) + 1);
+       const totalDamage = damage.reduce((a, b) => a + b, 0);
+       damageTotals.push(totalDamage);
+       allDamageResults.push(damage);
+}
+
+      const totalDamage = damageTotals.reduce((a, b) => a + b, 0);
+      const finalDamageString = damageParts.map((part, index) => {
+        const damageResult = allDamageResults[index];
+       return `${part}=${damageTotals[index]} (${damageResult.join('+')})`;
+      }).join(' + ');
 
       // 构造返回消息
-      const playerName = ctx.nickname || '玩家';  // 使用发送消息的玩家昵称
-      const final = `${playerName}>为${level}环${spellName}骰伤害，结果为${damageDice}=${totalDamage} (${damage.join('+')})`;
-
+      const playerName = ctx.player.name || '玩家';
+      const final = `${playerName}>为${level}环${spellData.name}骰伤害，结果为${finalDamageString} = ${totalDamage}`;
       seal.replyToSender(ctx, msg, final);
-    } catch (error) {
+     } catch (error) {
       seal.replyToSender(ctx, msg, '发生错误：' + error.message);
     }
 
