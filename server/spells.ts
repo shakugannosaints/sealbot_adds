@@ -1,3 +1,4 @@
+import { replaceDices } from './match_spell.ts'
 export type Spell = {
   name: string
   level: number
@@ -94,8 +95,17 @@ export function useSpell(args: UseSpellArgs): UseSpellResponse {
     return { success: false, message: `${spell.name} 最低要 ${spell.level} 环，${args.level} 环无法施放` }
   }
 
-  // TODO
-  return { success: true, message: `${args.user} 施放了 ${spell.name}，消耗了 ${args.level} 点法术位` }
+  if (args.level == spell.level || spell.entriesHigherLevel === undefined) {
+    return {
+      success: true,
+      message: `${args.user} 施放了 ${spell.name}\n${replaceDices(spell.entries.join(''), spell.level)}`
+    }
+  }
+  return {
+    success: true,
+    message: `${args.user} 施放了 ${spell.name}\n${replaceDices(spell.entries.join(''), spell.level)}\n${replaceDices(
+      spell.entriesHigherLevel[0].entries.join(''),
+      args.level
+    )}`
+  }
 }
-
-const spell = \{@dice ([\dd+ ]+)\}
