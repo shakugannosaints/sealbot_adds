@@ -54,6 +54,89 @@ export function findMostSimilarSpell(input: string, spells: Spell[]): Spell | nu
   return mostSimilar
 }
 
+export function findMostSimilarSpell2(input: string, spells: Spell[]): Spell | null {
+  if (spells.length === 0) return null
+
+  function levenshteinDistance(a: string, b: string): number {
+    const matrix = []
+
+    for (let i = 0; i <= b.length; i++) {
+      matrix[i] = [i]
+    }
+
+    for (let j = 0; j <= a.length; j++) {
+      matrix[0][j] = j
+    }
+
+    for (let i = 1; i <= b.length; i++) {
+      for (let j = 1; j <= a.length; j++) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1]
+        } else {
+          matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
+        }
+      }
+    }
+
+    return matrix[b.length][a.length]
+  }
+
+  let mostSimilar2 = spells[0]
+  let smallestDistance = levenshteinDistance(input.toLowerCase(), mostSimilar2.name.toLowerCase())
+
+  for (let i = 1; i < spells.length; i++) {
+    const distance = levenshteinDistance(input.toLowerCase(), spells[i].name.toLowerCase())
+    if (distance < smallestDistance) {
+      smallestDistance = distance
+      mostSimilar2 = spells[i+1]
+    }
+  }
+
+  return mostSimilar2
+}
+
+
+export function findMostSimilarSpell3(input: string, spells: Spell[]): Spell | null {
+  if (spells.length === 0) return null
+
+  function levenshteinDistance(a: string, b: string): number {
+    const matrix = []
+
+    for (let i = 0; i <= b.length; i++) {
+      matrix[i] = [i]
+    }
+
+    for (let j = 0; j <= a.length; j++) {
+      matrix[0][j] = j
+    }
+
+    for (let i = 1; i <= b.length; i++) {
+      for (let j = 1; j <= a.length; j++) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1]
+        } else {
+          matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
+        }
+      }
+    }
+
+    return matrix[b.length][a.length]
+  }
+
+  let mostSimilar3 = spells[0]
+  let smallestDistance = levenshteinDistance(input.toLowerCase(), mostSimilar3.name.toLowerCase())
+
+  for (let i = 1; i < spells.length; i++) {
+    const distance = levenshteinDistance(input.toLowerCase(), spells[i].name.toLowerCase())
+    if (distance < smallestDistance) {
+      smallestDistance = distance
+      mostSimilar3 = spells[i+2]
+    }
+  }
+
+  return mostSimilar3
+}
+
 export type UseSpellArgs = {
   spell: string
   level: number
@@ -82,10 +165,12 @@ export function useSpell(args: UseSpellArgs): UseSpellResponse {
 
   if (!spell) {
     const perhapsSpell = findMostSimilarSpell(args.spell, SPELL_DATA.spell)
+    const perhapsSpell2 = findMostSimilarSpell2(args.spell, SPELL_DATA.spell)
+    const perhapsSpell3 = findMostSimilarSpell3(args.spell, SPELL_DATA.spell)
     if (perhapsSpell)
       return {
         success: false,
-        message: `法术名未找到，但找到了类似的法术：${perhapsSpell.name}`
+        message: `法术名未找到，但找到了类似的法术：${perhapsSpell.name},${perhapsSpell2.name},${perhapsSpell3.name}`
       }
     return { success: false, message: '法术名未找到' }
   }
