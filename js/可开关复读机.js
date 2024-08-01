@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         可开关复读机
 // @description  可开关复读机.rpt on/off
-// @version      1.0.0
+// @version      1.0.1
 // @autor        冷筱华
 // @timestamp    2024-07-31
 // @license      AGPL-3.0
@@ -10,9 +10,10 @@
 
 // 全局对象用于存储每个群组的复读消息
 const groupRepeatMessages = {};
-
+globalThis.remsg ='';
+globalThis.jdmsg ='';
 if (!seal.ext.find('repeat')) {
-    const ext = seal.ext.new('repeat', '冷筱华', '1.0.0');
+    const ext = seal.ext.new('repeat', '冷筱华', '1.0.1');
     const cmdRpt = seal.ext.newCmdItemInfo();
     cmdRpt.name = 'rpt';
     cmdRpt.help = '复读功能';
@@ -30,9 +31,12 @@ if (!seal.ext.find('repeat')) {
 
     // 监听非命令消息
     ext.onNotCommandReceived = (ctx, msg) => {
-        const regex = /\[CQ:image,file=([A-Z0-9]{32,64})(\.[A-Z]+?)\]/gi;
-        let remsg =msg.message;
-        remsg=remsg.replace(regex,'[CQ:image,file=https://gchat.qpic.cn/gchatpic_new/0/0-0-$1/0]');
+        const regex = /\[CQ:image,file=([^,]+),subType=[^,]+,url=([^,]+),file_size=[^]+\]/gi;
+        remsg =msg.message;
+        jdmsg=msg.message;
+        jdmsg= jdmsg.replace(regex,'[CQ:image,file=$1');
+        remsg=remsg.replace(regex,'[CQ:image,file=$2]');
+        remsg=remsg.replace('https','http');
         const rptStatus = ext.storageGet(`${ctx.group.groupId}_rpt`);
         if (rptStatus !== 'on') return;
 
@@ -40,7 +44,7 @@ if (!seal.ext.find('repeat')) {
         if (checkRepeatMessages(msg, ctx.group.groupId)) {
             seal.replyToSender(ctx, msg, remsg);
             // 设置标志
-            ext.storageSet(`${ctx.group.groupId}_rpt_last`, remsg);
+            ext.storageSet(`${ctx.group.groupId}_rpt_last`, jdmsg);
         }
     };
 
@@ -56,7 +60,7 @@ if (!seal.ext.find('repeat')) {
 
         // 检查连续
         const messages = groupRepeatMessages[groupId];
-        messages.push(msg.message);
+        messages.push(jdmsg);
 
         // 保持消息队列不超过4条消息
         if (messages.length > 4) {
