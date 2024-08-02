@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GPTscript_Multirounds
 // @description  GPTscript，支持多轮对话与GUI黑白名单功能
-// @version      1.3.1
+// @version      1.3.2
 // @author       冷筱华
 // @timestamp    2024-07-20
 // @license      AGPL-3.0
@@ -11,7 +11,7 @@
 const OPENROUTER_API_KEY = 'your-api-key';
 
 if (!seal.ext.find('chat_bot')) {
-    const ext = seal.ext.new('chat_bot', '冷筱华', '1.3.1');
+    const ext = seal.ext.new('chat_bot', '冷筱华', '1.3.2');
     seal.ext.register(ext);
 
     // 白名单和黑名单配置
@@ -122,7 +122,7 @@ class AI {
     }
 
 async chat(text, ctx, msg) {
-const regex = /\[CQ:image,file=[^,]+,subType=[^,]+,url=([^,]+),file_size=[^]+\]/gi;
+    const regex = /\[CQ:image,file=[^,]+,subType=[^,]+,file_id=[^,]+,url=([^,]+),file_size=[^]+\]/gi;
 let remsg = msg.message;
 remsg=remsg.replace('https', 'http');//GPT看不到https的链接，必须是http
 // 分离图片和文本
