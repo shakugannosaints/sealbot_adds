@@ -31,7 +31,7 @@ if (!seal.ext.find('repeat')) {
 
     // 监听非命令消息
     ext.onNotCommandReceived = (ctx, msg) => {
-        const regex = /\[CQ:image,file=([^,]+),subType=[^,]+,url=([^,]+),file_size=[^]+\]/gi;
+        const regex = /\[CQ:image,file=([^,]+),subType=[^,]+,file_id=[^,]+,url=([^,]+),file_size=[^]+\]/gi;
         remsg =msg.message;
         jdmsg=msg.message;
         jdmsg= jdmsg.replace(regex,'[CQ:image,file=$1');
