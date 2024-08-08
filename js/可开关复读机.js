@@ -5,7 +5,7 @@
 // @autor        冷筱华
 // @timestamp    2024-07-31
 // @license      AGPL-3.0
-// @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
+// @homepageURL  https://koishi.icemoe.moe/sealdice/%E5%8F%AF%E5%BC%80%E5%85%B3%E5%A4%8D%E8%AF%BB%E6%9C%BA.html
 // ==/UserScript==
 
 // 全局对象用于存储每个群组的复读消息

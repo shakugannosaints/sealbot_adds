@@ -5,7 +5,7 @@
 // @description  运行代码并返回结果
 // @timestamp    2024-7-22
 // @license      AGPL-3.0
-// @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
+// @homepageURL  https://koishi.icemoe.moe/sealdice/runCode.html
 // ==/UserScript==
 
 const GLOT_BASE = 'https://glot.io/api';

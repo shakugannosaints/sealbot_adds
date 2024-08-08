@@ -5,7 +5,7 @@
 // @description  DnDSRD法术脚本
 // @timestamp    2024-07-24
 // @license      AGPL-3.0
-// @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
+// @homepageURL  https://koishi.icemoe.moe/sealdice/5eSpells.html
 // ==/UserScript==
 // 使用说明：请将本脚本放入海豹的js拓展文件夹，重载脚本，然后使用deno运行server并不要关闭其弹出的对话框
 const API_URL = 'http://localhost:8080'
