@@ -5,7 +5,7 @@
 // @author       冷筱华
 // @timestamp    2024-07-20
 // @license      AGPL-3.0
-// @homepageURL  https://github.com/shakugannosaints/sealbot_adds/tree/main/js
+// @homepageURL  https://koishi.icemoe.moe/sealdice/GPTscripts.html
 // @updateURL https://raw.githubusercontent.com/shakugannosaints/sealbot_adds/main/js/GPTscript_Multirounds.js
 // ==/UserScript==
 const OPENROUTER_API_KEY = 'your-api-key';
