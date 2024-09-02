@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         可开关复读机
-// @description  可开关复读机.rpt on/off
-// @version      1.0.1
-// @autor        冷筱华
-// @timestamp    2024-07-31
+// @description  .rpt
+// @version      1.0.3
+// @author       冷筱华
+// @timestamp    2024-09-03
 // @license      AGPL-3.0
-// @homepageURL  https://koishi.icemoe.moe/sealdice/%E5%8F%AF%E5%BC%80%E5%85%B3%E5%A4%8D%E8%AF%BB%E6%9C%BA.html
+// @homepageURL  https://koishi.icemoe.moe/sealdice/repeater
 // ==/UserScript==
 
 // 全局对象用于存储每个群组的复读消息
@@ -13,7 +13,7 @@ const groupRepeatMessages = {};
 globalThis.remsg ='';
 globalThis.jdmsg ='';
 if (!seal.ext.find('repeat')) {
-    const ext = seal.ext.new('repeat', '冷筱华', '1.0.1');
+    const ext = seal.ext.new('repeat', '冷筱华', '1.0.3');
     const cmdRpt = seal.ext.newCmdItemInfo();
     cmdRpt.name = 'rpt';
     cmdRpt.help = '复读功能';
@@ -31,11 +31,11 @@ if (!seal.ext.find('repeat')) {
 
     // 监听非命令消息
     ext.onNotCommandReceived = (ctx, msg) => {
-        const regex = /\[CQ:image,file=([^,]+),subType=[^,]+,file_id=[^,]+,url=([^,]+),file_size=[^]+\]/gi;
-        remsg =msg.message;
+        const regex = /\[CQ:image.*url=(.*?),file_size=(\d+)]/gi;
+        remsg=msg.message;
         jdmsg=msg.message;
-        jdmsg= jdmsg.replace(regex,'[CQ:image,file=$1');
-        remsg=remsg.replace(regex,'[CQ:image,file=$2]');
+        jdmsg=jdmsg.replace(regex,'[CQ:image,size=$2]');
+        remsg=remsg.replace(regex,'[CQ:image,file=$1]');
         remsg=remsg.replace('https','http');
         const rptStatus = ext.storageGet(`${ctx.group.groupId}_rpt`);
         if (rptStatus !== 'on') return;
