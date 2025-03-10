@@ -13,7 +13,7 @@ if (!seal.ext.find('note')) {
     
     // 配置项
     const defaultConfig = {
-      maxNoteLength: 500,      // 单条笔记最大长度
+      maxNoteLength: 100,      // 单条笔记最大长度
       maxNotesCount: 100,      // 最大存储数量
       defaultShowCount: 5,     // 默认显示条数
       pageSize: 5              // 每页显示数量
